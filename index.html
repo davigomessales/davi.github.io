@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <meta
+    name="description"
+    content="Rclone é uma aplicação que utiliza APIs do Google para permitir o gerenciamento e a sincronização de arquivos e dados autorizados pelo usuário."
+  />
+
+  <title>Rclone — Integração com Google APIs</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #0f172a;
+      color: white;
+      padding: 72px 20px;
+    }
+
+    .container {
+      width: min(100% - 40px, 960px);
+      margin: 0 auto;
+    }
+
+    header h1 {
+      margin: 0 0 16px;
+      font-size: 42px;
+      line-height: 1.1;
+    }
+
+    header p {
+      max-width: 700px;
+      margin: 0;
+      font-size: 18px;
+      color: #cbd5e1;
+    }
+
+    main {
+      padding: 48px 20px;
+    }
+
+    section {
+      background: white;
+      padding: 32px;
+      margin-bottom: 24px;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #0f172a;
+    }
+
+    ul {
+      padding-left: 24px;
+    }
+
+    a {
+      color: #2563eb;
+    }
+
+    footer {
+      padding: 32px 20px;
+      text-align: center;
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    .highlight {
+      background: #eff6ff;
+      border-left: 4px solid #2563eb;
+      padding: 16px 20px;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 32px;
+      }
+
+      section {
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <h1>Rclone</h1>
+
+      <p>
+        Integração para gerenciamento e sincronização de arquivos utilizando
+        APIs do Google, mediante autorização do usuário.
+      </p>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <section>
+        <h2>Sobre o aplicativo</h2>
+
+        <p>
+          O Rclone é uma aplicação desenvolvida para facilitar o gerenciamento
+          e a sincronização de arquivos e dados armazenados em serviços
+          compatíveis com APIs do Google.
+        </p>
+
+        <p>
+          A aplicação utiliza a autorização concedida pelo usuário para acessar
+          somente os recursos necessários ao funcionamento da funcionalidade
+          solicitada.
+        </p>
+
+        <div class="highlight">
+          <strong>Importante:</strong>
+          o acesso aos dados do Google somente ocorre após a autorização
+          explícita do usuário por meio do mecanismo de autorização OAuth do
+          Google.
+        </div>
+      </section>
+
+      <section>
+        <h2>Como o aplicativo funciona</h2>
+
+        <p>
+          Quando necessário, o usuário realiza a autorização por meio do
+          Google OAuth. Após a autorização, o aplicativo pode acessar os dados
+          permitidos pelos escopos solicitados.
+        </p>
+
+        <p>
+          O aplicativo utiliza esses dados exclusivamente para fornecer as
+          funcionalidades relacionadas ao gerenciamento e sincronização
+          solicitados pelo usuário.
+        </p>
+      </section>
+
+      <section>
+        <h2>Dados acessados</h2>
+
+        <p>
+          Dependendo das permissões concedidas pelo usuário, o aplicativo pode
+          acessar dados disponibilizados pelas APIs do Google, incluindo:
+        </p>
+
+        <ul>
+          <li>informações básicas da conta necessárias para autorização;</li>
+          <li>metadados de arquivos;</li>
+          <li>arquivos e conteúdos explicitamente autorizados pelo usuário;</li>
+          <li>informações necessárias para realizar operações solicitadas pelo usuário.</li>
+        </ul>
+
+        <p>
+          O aplicativo não solicita acesso a informações além do necessário
+          para as funcionalidades disponibilizadas.
+        </p>
+      </section>
+
+      <section>
+        <h2>Uso dos dados do Google</h2>
+
+        <p>
+          Os dados obtidos por meio das APIs do Google são utilizados
+          exclusivamente para fornecer as funcionalidades solicitadas pelo
+          usuário, incluindo operações de gerenciamento, acesso e sincronização
+          de arquivos, quando aplicável.
+        </p>
+
+        <p>
+          Os dados obtidos das APIs do Google não são vendidos, utilizados para
+          publicidade direcionada ou utilizados para criar perfis de
+          publicidade.
+        </p>
+
+        <p>
+          O uso das informações recebidas das APIs do Google segue a
+          <strong>Google API Services User Data Policy</strong>, incluindo os
+          requisitos de Limited Use aplicáveis.
+        </p>
+      </section>
+
+      <section>
+        <h2>Compartilhamento de dados</h2>
+
+        <p>
+          O aplicativo não comercializa os dados dos usuários.
+        </p>
+
+        <p>
+          Os dados obtidos por meio das APIs do Google não são compartilhados
+          com terceiros, exceto quando isso for estritamente necessário para
+          fornecer a funcionalidade solicitada pelo usuário ou quando exigido
+          por obrigação legal.
+        </p>
+      </section>
+
+      <section>
+        <h2>Segurança</h2>
+
+        <p>
+          São adotadas medidas técnicas e organizacionais razoáveis para
+          proteger as informações processadas pelo aplicativo contra acesso,
+          alteração, divulgação ou destruição não autorizados.
+        </p>
+
+        <p>
+          As credenciais e tokens utilizados para autorização devem ser tratados
+          como informações confidenciais e não devem ser compartilhados pelo
+          usuário.
+        </p>
+      </section>
+
+      <section>
+        <h2>Privacidade</h2>
+
+        <p>
+          Para obter informações detalhadas sobre coleta, utilização,
+          armazenamento, compartilhamento e exclusão de dados, consulte nossa
+          Política de Privacidade.
+        </p>
+
+        <p>
+          <a href="./privacy-policy.html">
+            Ler a Política de Privacidade
+          </a>
+        </p>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>
+        © 2026 Rclone. Todos os direitos reservados.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
